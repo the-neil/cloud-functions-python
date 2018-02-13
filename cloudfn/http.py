@@ -7,11 +7,11 @@ from six.moves.urllib_parse import urlparse
 
 class Request:
     def __init__(self, raw_json):
-        self.headers = raw_json['headers']
-        self.method = raw_json['method']
-        self.body = raw_json['body']
-        self.url = raw_json['url']
-        self.ip = raw_json['remote_addr']
+        self.headers = raw_json.get('headers', None)
+        self.method = raw_json.get('method', None)
+        self.body = raw_json.get('body', None)
+        self.url = raw_json.get('url', None)
+        self.ip = raw_json.get('remote_addr', None)
 
         components = urlparse(self.url)
         self.path = components.path

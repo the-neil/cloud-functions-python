@@ -231,7 +231,7 @@ def main():
     parser.add_argument('--python_version', type=str, default='2.7',
                         help='The python version you are targeting, '
                         'only applies when building for production',
-                        choices=['2.7', '3.5'])
+                        choices=['2.7', '3.5', '3.6'])
     parser.add_argument('-v', '--verbose', action='store_true',
                         help='Build in verbose mode '
                         'showing full build output')
